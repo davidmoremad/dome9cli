@@ -18,9 +18,11 @@ import io
 from setuptools import setup, find_packages
 from dome9 import __author__, __license__, APP_NAME, APP_DESCRIPTION
 
+
 def read_file(filename):
     with io.open(filename, encoding='utf-8') as f:
         return f.read()
+
 
 REPOSITORY_URL = 'https://github.com/davidmoremad/dome9cli'
 VERSION = read_file('VERSION').strip()
@@ -63,7 +65,7 @@ setup(
         'Topic :: Software Development :: Testing',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    entry_points = {
+    entry_points={
         'console_scripts': [
             'dome9cli = dome9.cli:run',
         ],
