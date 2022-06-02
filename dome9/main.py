@@ -1,13 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""
-This script is a simple tool that facilitates the daily
-use and helps enormously to work in agile methodologies.
-This package consumes calls through the Dome9 Python SDK
-mentioned above so it contains the same methods.
+# Copyright (C) 2022 David Amrani Hernandez
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-Copyright (c) Telefonica Digital España, 2019
-"""
 import sys
 import json
 import fire
@@ -284,7 +291,7 @@ class Dome9CLI():
         self._pprint(assessment['tests'], ['rule.name', 'rule.severity', 'testedCount', 'nonComplyingCount'])
 
     def run_assessment(self, rulesetId, cloudAccountId, stats=False, export=False):
-        """Run assessment and get report URL
+        """Run assessment and show results
 
         Args:
             rulesetId (int): ID of the ruleset
@@ -296,6 +303,13 @@ class Dome9CLI():
             self._print_assessment_results(assessment, stats=stats, export=export)
 
     def get_assessment(self, assessmentId, stats=False, export=False):
+        """Get assessment by ID
+
+        Args:
+            assessmentId (str): Id of the assessment
+            stats (bool, optional): Show statistics of the assessment. Defaults to False.
+            export (bool, optional): Export results to output file. Defaults to False.
+        """
         assessment = self._dome9.get_assessment(assessmentId)
         if assessment:
             self._print_assessment_results(assessment, stats=stats, export=export)

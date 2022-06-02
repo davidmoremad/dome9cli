@@ -67,7 +67,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'dome9cli = dome9.cli:run',
+            'dome9cli = cli.main:run',
         ],
     },
 )
