@@ -16,7 +16,7 @@
 
 import io
 from setuptools import setup, find_packages
-from dome9 import __author__, __license__, APP_NAME, APP_DESCRIPTION
+from cli import __author__, __license__, APP_NAME, APP_DESCRIPTION
 
 
 def read_file(filename):
