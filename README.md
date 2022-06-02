@@ -1,30 +1,22 @@
 # Dome9 CLI
 
-This Command Line Interface (CLI) is a simple tool that facilitates the daily use and helps enormously to work in agile methodologies.
-This package consumes calls through the Dome9 Python SDK mentioned above so it contains the same methods.
+This Command Line Interface (CLI) is a set of commands used to create and manage Dome9 resources.
+Developed to facilitate the daily use and help to work in agile methodologies (continuous-integration)
+This package consumes calls through the Dome9 Python SDK so it contains the same methods.
 
 This CLI helps to work on Dome9 from our different agile services like Jenkins, Github or Travis, creating new rulesets, running
-assessments or getting protected assets. You only need to download the script stored on `./cli/` folder and launch it with `./dome9cli.py --help`
-If you want to use it in any path or just typing `dome9`, you have to add the absolute path to your `PATH` environment variable. It will be
-automated soon. 
+assessments or listing our protected assets.
 
-For detailed information on this command, run:
-`dome9cli.py --help`
-
-
-## Installation
-
-1. Open the file `dome9cli.py` and copy its content
-1. Create the file `/usr/local/bin/dome9` and paste the code
-1. Give it execution permission: `chmod u+x /usr/local/bin/dome9`
-
-Now, run `dome9 --help` and you should see the expected output.
+To install:
+```
+pip install --user dome9cli
+dome9cli --help
+```
 
 ## Commands
 
-
 ```
-Usage: .\dome9cli.py <command> <arguments>
+Usage: dome9cli <command> <arguments>
 
 ```
 
@@ -106,8 +98,3 @@ Command: `.\dome9cli.py list_rulesets`
 ####  run_assessment  
 Description: Run assessment and get report URL  
 Command: `.\dome9cli.py run_assessment rulesetId=0, cloudAccountId=0000-0000-0000-0000`  
-
----
-
-_CDO Telefonica_
-_Copyright (c) Telefonica Digital España, 2019_
