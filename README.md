@@ -1,5 +1,7 @@
 # Dome9 CLI
 
+[![Test](https://github.com/davidmoremad/dome9cli/actions/workflows/test.yaml/badge.svg)](https://github.com/davidmoremad/dome9cli/actions/workflows/test.yaml)
+
 This Command Line Interface (CLI) is a set of commands used to create and manage Dome9 resources.
 Developed to facilitate the daily use and help to work in agile methodologies (continuous-integration)
 This package consumes calls through the Dome9 Python SDK so it contains the same methods.
