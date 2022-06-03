@@ -23,7 +23,7 @@ jobs:
       - name: Install package
         run: python setup.py install
       - name: Running package
-        run: python .\cli\main.py
+        run: python ./cli/main.py
 
   lint:
     runs-on: ubuntu-latest
