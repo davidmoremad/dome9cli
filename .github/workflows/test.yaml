@@ -25,7 +25,7 @@ jobs:
       - name: Running package
         run: |
           python ./cli/main.py list_rules -5
-          dome9 list_rules -5
+          dome9cli list_rules -5
         env:
           DOME9_ACCESS_KEY: ${{ secrets.DOME9_ACCESS_KEY }}
           DOME9_SECRET_KEY: ${{ secrets.DOME9_SECRET_KEY }}
