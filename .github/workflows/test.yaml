@@ -1,6 +1,6 @@
-name: Build, Lint and Test
+name: Test
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
       - name: Install package
         run: python setup.py install
       - name: Running package
-        run: python -c "from dome9 import Dome9;d9=Dome9('1234', '1234')"
+        run: python .\cli\main.py
 
   lint:
     runs-on: ubuntu-latest
